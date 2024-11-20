@@ -9,10 +9,10 @@
       </div>
       <div class="hidden xl:flex">
         <ul class="flex gap-10 text-lg">
-          <li><a class="hover:text-[#84CC16] transition ease duration-300" href="/HomePage">Главная</a></li>
-          <li><a class="hover:text-[#84CC16] transition ease duration-300" href="#">Компания</a></li>
+          <li><a class="hover:text-[#84CC16] transition ease duration-300" href="/">Главная</a></li>
+          <li><NuxtLink class="hover:text-[#84CC16] transition ease duration-300" to="/CompanyPage">Компания</NuxtLink></li>
           <li><a class="hover:text-[#84CC16] transition ease duration-300" href="#">Продукты</a></li>
-          <li><a class="hover:text-[#84CC16] transition ease duration-300" href="#">Контакты</a></li>
+          <li><NuxtLink class="hover:text-[#84CC16] transition ease duration-300" to="/ContactPage">Контакты</NuxtLink></li>
           <li><a class="hover:text-[#84CC16] transition ease duration-300" href="#">Заказать</a></li>
         </ul>
       </div>
@@ -22,7 +22,7 @@
             d="M10.8194 12.42C12.5428 10.5109 13.1518 9.97552 13.8862 9.72634C14.3945 9.5863 14.9275 9.57852 15.4392 9.70369C16.1129 9.90962 16.2911 10.0661 18.5002 12.3808C20.441 14.4134 20.6349 14.6338 20.8209 15.0312C21.1767 15.7289 21.2322 16.553 20.9737 17.2965C20.7778 17.8628 20.4997 18.2376 19.3227 19.4794L18.5551 20.2887C18.3534 20.5041 18.3061 20.8313 18.4375 21.1001C20.1432 24.16 22.5631 26.7117 25.4682 28.5137C25.8026 28.702 26.2144 28.6412 26.4866 28.3634L27.2249 27.5994C27.6812 27.1075 28.1645 26.644 28.6722 26.2114C29.4695 25.6966 30.4631 25.6506 31.3003 26.0899C31.7096 26.2958 31.8448 26.4235 33.8463 28.524C35.9104 30.6884 35.9692 30.7563 36.1963 31.2526C36.6238 32.0742 36.6194 33.0692 36.1846 33.8865C35.9633 34.3478 35.8282 34.5146 34.6668 35.7626C33.9657 36.5163 33.3057 37.2041 33.2 37.3051C32.242 38.1392 31.0128 38.5483 29.7728 38.4459C27.504 38.2285 25.3081 37.4911 23.3394 36.2857C18.9783 33.856 15.2657 30.316 12.5408 25.989C11.9473 25.0834 11.4196 24.132 10.9623 23.143C9.73555 20.932 9.10204 18.4125 9.12926 15.8529C9.22292 14.5138 9.83361 13.2734 10.8194 12.42Z"
             stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-        <p> +7(901)-780-05-04</p>
+        <p> +7(999)-555-55-55</p>
       </div>
       <div class="xl:hidden">
         <button @click="toggleMenu" class="text-white">
@@ -35,16 +35,16 @@
        text-center animate-slide-in">
         <li class="flex justify-around items-center max-md:text-sm flex-col">
           <img class="max-md:w-6 h-6" src="/home.svg" alt="">
-          <a class="hover:text-[#84CC16] transition ease duration-300" href="#">Главная</a></li>
+          <NuxtLink class="hover:text-[#84CC16] transition ease duration-300" href="/">Главная</NuxtLink></li>
         <li class="flex justify-around items-center max-md:text-sm flex-col">
           <img class="max-md:w-6 h-6" src="/companyIcon.svg" alt="">
-          <a class="hover:text-[#84CC16] transition ease duration-300" href="#">Компания</a></li>
+          <NuxtLink class="hover:text-[#84CC16] transition ease duration-300" href="/CompanyPage">Компания</NuxtLink></li>
         <li class="flex justify-around items-center max-md:text-sm flex-col ">
           <img class="max-md:w-6 h-6" src="/productsIcon.svg" alt="">
           <a class="hover:text-[#84CC16] transition ease duration-300" href="#">Продукты</a></li>
         <li class="flex justify-around items-center max-md:text-sm flex-col">
           <img class="max-md:w-6 h-6" src="/phonemenu.svg" alt="">
-          <a class="hover:text-[#84CC16] transition ease duration-300" href="#">Контакты</a></li>
+          <NuxtLink class="hover:text-[#84CC16] transition ease duration-300" href="/ContactPage">Контакты</NuxtLink></li>
         <li class="flex justify-around items-center max-md:text-sm flex-col">
           <img class="max-md:w-6 h-6" src="/basketIcon.svg" alt="">
           <a class="hover:text-[#84CC16] transition ease duration-300" href="#">Заказать</a></li>

@@ -1,0 +1,3 @@
+<template>
+    <CompanyApp></CompanyApp>
+</template>
