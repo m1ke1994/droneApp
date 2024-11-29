@@ -12,7 +12,7 @@
              производственная база компании позволяет проектировать и производить различные БПЛА 
              (в том числе автономные) и учебно-методические материалы для тренингов будущих 
              эксплуатантов. </p><br>
-             <p class="text-black text-lg max-lg:text-md" ><Nuxtlink class="text-lime-800 cursor-pointer hover:opacity-70 transition-all duration-300" to="#">Оставьте заявку</Nuxtlink> 
+             <p class="text-black text-lg max-lg:text-md"><strong>Оставьте заявку </strong>
                 на сайте, и мы спроектируем и изготовим прототип БПЛА под Ваши задачи.</p>
                 
     </div>

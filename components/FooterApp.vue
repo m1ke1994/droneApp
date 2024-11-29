@@ -24,6 +24,7 @@
 </script>
 
 <style scoped>
+
 hr {
     border: 1px solid #5f9907;
 }

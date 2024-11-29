@@ -5,10 +5,10 @@
             <p ref="title" class="text-xl text-center w-2/3 mx-auto fixed-width"></p>
             <img class="w-full" src="/sliderDrone.svg" alt="">
             <div class="flex justify-center gap-4 max-md:flex-col">
-                <button
-                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300">Галерея</button>
-                <button
-                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300">Видео</button>
+                <NuxtLink
+                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300" to="/GaleryPage">Галерея</NuxtLink>
+                <NuxtLink
+                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300" to="/VideoPage">Видео</NuxtLink>
             </div>
         </div>
         <div class="w-6/12 max-lg:w-11/12 mx-auto mt-4 order-2 max-xl:order-1 max-lg:order-2 max-lg:hidden">

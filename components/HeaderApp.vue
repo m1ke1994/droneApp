@@ -1,102 +1,39 @@
-<script>
-export default {
-  data() {
-    return {
-      isMenuOpen: false,
-    };
-  },
-  methods: {
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    },
-  },
-};
-</script>
 
 <template>
-  <nav class="fixed top-0 left-0 right-0 z-50 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="/dronmain.svg" alt="" class="rotate-image">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Droneshop</span>
-      </a>
-      <button data-collapse-toggle="navbar-solid-bg" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-        aria-controls="navbar-solid-bg" aria-expanded="false" @click="toggleMenu">
-        <svg v-if="!isMenuOpen" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15" />
-        </svg>
-        <svg v-else version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 94.926 94.926"
-          style="enable-background:new 0 0 94.926 94.926;" xml:space="preserve">
-          <g>
-            <path
-              d="M55.931,47.463L94.306,9.09c0.826-0.827,0.826-2.167,0-2.994L88.833,0.62C88.436,0.224,87.896,0,87.335,0 c-0.562,0-1.101,0.224-1.498,0.62L47.463,38.994L9.089,0.62c-0.795-0.795-2.202-0.794-2.995,0L0.622,6.096 c-0.827,0.827-0.827,2.167,0,2.994l38.374,38.373L0.622,85.836c-0.827,0.827-0.827,2.167,0,2.994l5.473,5.476 c0.397,0.396,0.936,0.62,1.498,0.62s1.1-0.224,1.497-0.62l38.374-38.374l38.374,38.374c0.397,0.396,0.937,0.62,1.498,0.62 s1.101-0.224,1.498-0.62l5.473-5.476c0.826-0.827,0.826-2.167,0-2.994L55.931,47.463z">
-            </path>
-          </g>
-        </svg>
-      </button>
-      <div :class="['w-full md:block md:w-auto ', { 'hidden': !isMenuOpen, 'slide-down': isMenuOpen }]"
-        id="navbar-solid-bg">
-        <ul 
-          class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
-          <li>
-            <NuxtLink to="/"
-              class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:text-gray-900 md:dark:text-white dark:text-white text-xl hover:text-lime-700 transition-all duration-300"
-              aria-current="page">Главная</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/CompanyPage"
-              class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:text-gray-900 md:dark:text-white dark:text-white text-xl hover:text-lime-700 transition-all duration-300">
-              Компании</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="ContactPage"
-              class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:text-gray-900 md:dark:text-white dark:text-white text-xl hover:text-lime-700 transition-all duration-300">
-              Контакты</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="#"
-              class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:text-gray-900 md:dark:text-white dark:text-white text-xl hover:text-lime-700 transition-all duration-300">
-              Продукты</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="#"
-              class="block py-2 px-3 md:p-0 text-gray-900 rounded md:bg-transparent md:text-gray-900 md:dark:text-white dark:text-white text-xl hover:text-lime-700 transition-all duration-300">
-              Заказать</NuxtLink>
-          </li>
-        </ul>
+  <nav class="navbar">
+    <div class="navbar-container container">
+      <input type="checkbox" name="" id="menu-toggle">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="menu-items">
+        <li><NuxtLink to="/" @click="closeMenu">Главная</NuxtLink></li>
+        <li><NuxtLink to="/CompanyPage" @click="closeMenu">О компании</NuxtLink></li>
+        <li><NuxtLink to="/ContactPage" @click="closeMenu">Контакты</NuxtLink></li>
+        <li><NuxtLink to="#" @click="closeMenu">Продукты</NuxtLink></li>
+        <li><NuxtLink to="/OrderPage" @click="closeMenu">Заказать</NuxtLink></li>
+      </ul>
+      <div class="flex items-center gap-4">
+        <h1>Droneshop</h1>
+        <img src="/dronmain.svg" alt="" class="logo rotate-image">
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    closeMenu() {
+      document.getElementById('menu-toggle').checked = false;
+    }
+  }
+}
+</script>
+
 <style scoped>
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-}
-
-.slide-down {
-  animation: slide-down 0.3s ease-out;
-}
-
-@keyframes slide-down {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 .rotate-image {
   animation: rotate 5s linear infinite;
 }
@@ -105,9 +42,178 @@ export default {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
+  }
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.logo {
+  order: 1;
+  font-size: 2.3rem;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #0b5f1d;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
   }
 }
 </style>
