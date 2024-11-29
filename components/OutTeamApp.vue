@@ -24,14 +24,14 @@ const team = [
 </script>
 
 <template>
-    <div class="conteiner bg-[#090909]">
+    <div class="conteiner bg-white">
         <div class="w-10/12 mx-auto p-10 max-md:w-full max-lg:w-full max-lg:w-11/12 flex flex-col justify-center ">
-            <h1 class="text-lime-500 text-3xl mb-10 ">Наша команда</h1>
+            <h1 class="text-lime-800 text-3xl mb-10 ">Наша команда</h1>
 
             <div class="grid grid-cols-3 gap-10 max-lg:grid-cols-2 max-sm:grid-cols-1">
                 
                 <div v-for="i in team" :key="i"
-                    class="card-out-team text-white flex flex-col items-center gap-4 p-4 relative">
+                    class="card-out-team text-black flex flex-col items-center gap-4 p-4 relative">
                     <img :src="i.img" alt="">
                     <div class="flex flex-col gap-4">
                         <p class="text-xl font-bold">{{ i.name }}</p>

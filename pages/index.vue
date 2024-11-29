@@ -32,6 +32,12 @@ const applicationTwo = [
     title: 'Cканирование',
     text: 'Геодезия, маркшейдерия, горное дело, нефтегазодобыча, строительство. точное земледелие, природоохрана',
     description: 'Дроны могут быть использованы для выполнения лазерного сканирования, что позволяет получать точные трехмерные модели объектов и terreno.'
+  },
+  {
+    img: '/12.jpg',
+    title: 'Cканирование',
+    text: 'Геодезия, маркшейдерия, горное дело, нефтегазодобыча, строительство. точное земледелие, природоохрана',
+    description: 'Дроны могут быть использованы для выполнения лазерного сканирования, что позволяет получать точные трехмерные модели объектов и terreno.'
   }
 ]
 
@@ -53,6 +59,12 @@ const applicationOne = [
     title: 'Сельское хозяйство',
     text: 'Мониторинг БПЛА, Инвентаризация полей и техники, расчет индексов растительности, посев, внесение биологической защиты, опрыскивание',
     description: 'Дроны могут быть использованы для мониторинга состояния сельскохозяйственных угодий, сбора данных о урожае, а также для выполнения других задач в области сельского хозяйства.'
+  },
+  {
+    img: '/12.jpg',
+    title: 'Cканирование',
+    text: 'Геодезия, маркшейдерия, горное дело, нефтегазодобыча, строительство. точное земледелие, природоохрана',
+    description: 'Дроны могут быть использованы для выполнения лазерного сканирования, что позволяет получать точные трехмерные модели объектов и terreno.'
   }
 ]
 
@@ -81,13 +93,13 @@ const items = [
 ]
 </script>
 <template>
-  <div class="conteiner bg-[#090909]">
+  <div class="conteiner bg-gray-100">
     <div class="w-11/12 mx-auto p-10">
-      <h1 class="text-lime-500 text-3xl mb-10 max-sm:text-xl">Наши преимущества</h1>
+      <h1 class="text-lime-800 text-3xl mb-10 max-sm:text-xl">Наши преимущества</h1>
       <main>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-10 ">
           <div v-for="item in items" :key="item"
-            class="card text-white bg-[#1b1b1b] border-2 border-white p-4 flex-col rounded-xl transition-all duration-500 hover:bg-white hover:text-black">
+            class="card text-black bg-gray-100  p-4 flex-col rounded-xl transition-all duration-500 hover:bg-white hover:shadow-xl">
             <ul class="flex items-center mb-4 gap-10">
               <li><img :src="item.img" alt=""></li>
               <li>
@@ -102,8 +114,8 @@ const items = [
 
 
 
-          <h1 class="text-lime-500 text-3xl py-10 max-sm:text-xl">Отрасли применения</h1>
-          <div class="grid grid-cols-3 gap-10 max-lg:grid-cols-2 max-md:grid-cols-1">
+          <h1 class="text-lime-800 text-3xl py-10 max-sm:text-xl">Отрасли применения</h1>
+          <div class="grid grid-cols-4 gap-10 max-lg:grid-cols-2 max-md:grid-cols-1">
           <div v-for="item in applicationOne" :key="item" class="hover-text-one w-1/3">
             <figure class="effect-text-two">
               <img :src="item.img " alt=""/>
@@ -116,7 +128,7 @@ const items = [
          </div>
         <img v-if="!nextClick" class="mx-auto p-10 hover:scale-125 transition-all duration-500" src="/nextArrow.svg" alt="" @click="nextClickArrow">
           
-        <div v-else class="grid grid-cols-3 gap-10 max-lg:grid-cols-2 max-md:grid-cols-1 mt-10 opacity-0 transition-opacity" :class="{ 'opacity-100': isVisible }">
+        <div v-else class="grid grid-cols-4 gap-10 max-lg:grid-cols-2 max-md:grid-cols-1 mt-10 opacity-0 transition-opacity" :class="{ 'opacity-100': isVisible }">
           <div v-for="item in applicationTwo" :key="item" class="hover-text-one w-1/3">
             <figure class="effect-text-two">
               <img :src="item.img " alt=""/>
@@ -128,13 +140,6 @@ const items = [
           </div>
          </div>
          <CallApp></CallApp>
-
-
-
-
-
-
-
       </main>
     </div>
   </div>
