@@ -1,17 +1,17 @@
 
 <template>
-    <div class="w-full flex bg-black h-3/5 p-10 gap-4 max-lg:flex-col text-white">
-        <div class="w-6/12 flex flex-col items-center gap-10 max-lg:w-full order-1 max-xl:order-2 max-lg:order-1">
+    <div class="w-full flex bg-gray-100 h-3/5 p-10 gap-4 max-lg:flex-col text-black mt-16">
+        <div class="w-6/12 flex flex-col items-center gap-10 max-lg:w-full order-1 max-xl:order-2 max-md:order-1">
             <p ref="title" class="text-xl text-center w-2/3 mx-auto fixed-width"></p>
             <img class="w-full" src="/sliderDrone.svg" alt="">
-            <div class="flex justify-center mt-10 gap-10 max-md:flex-col">
+            <div class="flex justify-center gap-4 max-md:flex-col">
                 <button
-                    class=" max-sm:w-28 w-48 text-lime-500 py-2 px-14 border border-lime-500 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-500 hover:text-black font-bold transition ease duration-300">Галерея</button>
+                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300">Галерея</button>
                 <button
-                    class=" max-sm:w-28 w-48 text-lime-500 py-2 px-14 border border-lime-500 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-500 hover:text-black font-bold transition ease duration-300">Видео</button>
+                    class=" max-sm:w-28 w-48 text-lime-800 py-2 px-14 border border-lime-800 text-xl max-lg:text-base max-lg:px-8 max-lg:py-1 hover:bg-lime-800 hover:text-white font-bold transition ease duration-300">Видео</button>
             </div>
         </div>
-        <div class="w-6/12 max-lg:w-11/12 mx-auto mt-4 order-2 max-xl:order-1 max-lg:order-2 ">
+        <div class="w-6/12 max-lg:w-11/12 mx-auto mt-4 order-2 max-xl:order-1 max-lg:order-2 max-lg:hidden">
             <slider></slider>
         </div>
     </div>

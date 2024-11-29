@@ -14,7 +14,7 @@
       class="w-2/3 mx-auto max-md:w-full max-xl:w-full"
     >
       <template #default="{ item }">
-        <img :src="item" class="w-full border-2 border-black rounded-lg" draggable="false">
+        <img :src="item" class="w-full border-2 border-gray-100 rounded-lg" draggable="false">
       </template>
   
       <template #indicator="{ onClick, page, active }">
