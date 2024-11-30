@@ -6,15 +6,15 @@
         <div class="w-10/12 flex justify-between mx-auto flex-wrap ">
             <div class="flex gap-6 items-center max-lg:mx-auto p-4 ">
                 <img src="/dronmain.svg" alt="" class="rotate-image">
-                <p class="text-xl">DroneShop</p>
+                <p class="text-xl text-black">DroneShop</p>
             </div>
             <div class="flex gap-4 items-center max-lg:mx-auto px-4 md:text-sm ">
                 <img src="/phone.svg" alt="" >
-                <p class="text-2xl">+7 999 55 44 05</p>
+                <p class="text-2xl text-black">+7 999 55 44 05</p>
             </div>
             <div class="flex gap-4 items-center max-lg:mx-auto px-4 md:text-sm ">
                 <img src="/gmail.svg" alt="" >
-                <p class="text-2xl">Droneshop@gmail.com</p>
+                <p class="text-2xl text-black">Droneshop@gmail.com</p>
             </div>
         </div>
     </footer>
